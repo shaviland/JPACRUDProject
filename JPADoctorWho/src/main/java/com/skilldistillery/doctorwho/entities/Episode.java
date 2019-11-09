@@ -1,5 +1,6 @@
 package com.skilldistillery.doctorwho.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,12 +14,14 @@ public class Episode {
 	private int id;
 	private String era;
 	private int season;
+	@Column(name = "episode_number")
 	private int episodeNum;
 	private String title;
 	private String description;
 	private int doctor;
 	private String villain;
 	private String planet;
+	@Column(name = "year_set")
 	private String yearSet;
 	
 	

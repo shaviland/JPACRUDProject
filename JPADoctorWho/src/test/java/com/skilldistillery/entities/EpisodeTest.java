@@ -2,6 +2,7 @@ package com.skilldistillery.entities;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.persistence.Column;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -43,18 +44,58 @@ class EpisodeTest {
 		episode = null;
 		em.close();
 	}
-//	Season
-//	Episode #
-//	Description
-//	Doctor
-//	Villain
-//	Planet
-//	Year
+//	private int id;
+//	private String era;
+//	private int season;
+//	@Column(name = "episode_number")
+//	private int episodeNum;
+//	private String title;
+//	private String description;
+//	private int doctor;
+//	private String villain;
+//	private String planet;
+//	@Column(name = "year_set")
+//	private String yearSet;
 
+	@Test
+	@DisplayName("testing entity mapping for Episode era" )
+	void era() {
+		assertEquals("Revived", episode.getEra() );
+	}
 	@Test
 	@DisplayName("testing entity mapping for Episode season" )
 	void season() {
-		assertEquals(10, episode.getSeason() );
+		assertEquals(1, episode.getSeason() );
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode episode number" )
+	void episodeNum() {
+		assertEquals(1, episode.getEpisodeNum() );
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode title" )
+	void title() {
+		assertEquals("Rose", episode.getTitle() );
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode description" )
+	void description() {
+		assertTrue( episode.getDescription().contains("middle of the Doctor’s plot to prevent") );
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode villain" )
+	void villain() {
+		assertTrue(episode.getVillain().contains("The  Nestene Consciousness") );
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode planet" )
+	void planet() {
+		assertEquals("Earth", episode.getPlanet());
+	}
+	@Test
+	@DisplayName("testing entity mapping for Episode year set" )
+	void yearSet() {
+		assertEquals("2005", episode.getYearSet());
 	}
 
 }
