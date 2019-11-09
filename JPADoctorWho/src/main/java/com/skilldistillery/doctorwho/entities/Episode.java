@@ -11,18 +11,38 @@ public class Episode {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String era;
 	private int season;
 	private int episodeNum;
+	private String title;
 	private String description;
 	private int doctor;
 	private String villain;
 	private String planet;
-	private int year;
+	private String yearSet;
 	
-	//Constructor
+	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getYearSet() {
+		return yearSet;
+	}
+
+	public void setYearSet(String yearSet) {
+		this.yearSet = yearSet;
+	}
+
+	//Constructor		
 	public Episode() {
 		super();
 	}
+
 
 	public int getId() {
 		return id;
@@ -30,6 +50,14 @@ public class Episode {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getEra() {
+		return era;
+	}
+
+	public void setEra(String era) {
+		this.era = era;
 	}
 
 	public int getSeason() {
@@ -80,14 +108,6 @@ public class Episode {
 		this.planet = planet;
 	}
 
-	public int getYear() {
-		return year;
-	}
-
-	public void setYear(int year) {
-		this.year = year;
-	}
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -95,11 +115,13 @@ public class Episode {
 		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + doctor;
 		result = prime * result + episodeNum;
+		result = prime * result + ((era == null) ? 0 : era.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((planet == null) ? 0 : planet.hashCode());
 		result = prime * result + season;
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + ((villain == null) ? 0 : villain.hashCode());
-		result = prime * result + year;
+		result = prime * result + ((yearSet == null) ? 0 : yearSet.hashCode());
 		return result;
 	}
 
@@ -121,6 +143,11 @@ public class Episode {
 			return false;
 		if (episodeNum != other.episodeNum)
 			return false;
+		if (era == null) {
+			if (other.era != null)
+				return false;
+		} else if (!era.equals(other.era))
+			return false;
 		if (id != other.id)
 			return false;
 		if (planet == null) {
@@ -130,21 +157,29 @@ public class Episode {
 			return false;
 		if (season != other.season)
 			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
 		if (villain == null) {
 			if (other.villain != null)
 				return false;
 		} else if (!villain.equals(other.villain))
 			return false;
-		if (year != other.year)
+		if (yearSet == null) {
+			if (other.yearSet != null)
+				return false;
+		} else if (!yearSet.equals(other.yearSet))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Episode [id=" + id + ", season=" + season + ", episodeNum=" + episodeNum + ", description="
-				+ description + ", doctor=" + doctor + ", villain=" + villain + ", planet=" + planet + ", year=" + year
-				+ "]";
+		return "Episode [id=" + id + ", era=" + era + ", season=" + season + ", episodeNum=" + episodeNum + ", title="
+				+ title + ", description=" + description + ", doctor=" + doctor + ", villain=" + villain + ", planet="
+				+ planet + ", yearSet=" + yearSet + "]";
 	}
 
 	
