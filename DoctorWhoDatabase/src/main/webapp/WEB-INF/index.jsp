@@ -17,10 +17,15 @@
 		<input type="submit" class="btn btn-outline-light"
 			value="Add An Episode" />
 	</form>
-	<c:forEach items="${episodes}" var="episode">
+	</form>
+		<form action="viewEpisodes.do" method="GET">
+		<input type="submit" class="btn btn-outline-light"
+			value="View All Episodes" />
+	</form>
+	<%-- <c:forEach items="${episodes}" var="episode">
 		<a href="getEpisode.do?fid=${episode.id}">${episode.title}</a>
 		<br>
-	</c:forEach>
+	</c:forEach> --%>
 
 	
 </body>

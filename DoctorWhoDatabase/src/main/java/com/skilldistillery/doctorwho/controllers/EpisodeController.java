@@ -23,12 +23,22 @@ public class EpisodeController {
 
 	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public String index(Model model) {
+		
+		List<Episode> episode = epDAO.findAll();
+		
+		model.addAttribute("episodes", episode);
+		
+		return "index";
+		
+	}
+	@RequestMapping(path = "viewEpisodes.do", method = RequestMethod.GET)
+	public String viewEpisodes(Model model) {
 
 		List<Episode> episode = epDAO.findAll();
 
 		model.addAttribute("episodes", episode);
 
-		return "index";
+		return "episode/view-episodes";
 
 	}
 
