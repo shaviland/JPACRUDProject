@@ -56,7 +56,7 @@
 		<input type="submit" class="btn btn-outline-light"
 			value="Create Episode" />
 	</form:form>
-	<form action="index" method="GET">
+	<form action="/" method="GET">
 		<input type="submit" class="btn btn-outline-light"
 			value="Return to Home Page" />
 	</form>

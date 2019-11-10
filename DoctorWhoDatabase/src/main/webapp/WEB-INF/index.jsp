@@ -18,9 +18,9 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <title>Doctor Who Directory</title>
 </head>
-<body background="../images/background.jpg">
-
-	<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+<body>
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="/">Doctor Who Database</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarNav" aria-controls="navbarNav"
@@ -32,22 +32,22 @@
 				<li class="nav-item active">
 
 					<form action="getEpisode.do" method="GET" id="lookUp">
-						Look Up Episode By ID: <input type="text" name="fid"
-							required="required" /> <input type="submit" value="Show Episode" />
+						Look Up Episode By ID: <input type="text" name="fid"  required="required" /> <input
+							type="submit" value="Show Episode"/>
 					</form>
 				</li>
 
 				<li class="nav-item active" id="createEp">
-					<form action="createEpisode.do" method="GET">
-						<button class="btn btn-sm btn-outline-secondary" type="button"
-							type="submit">Add An Episode</button>
+					<form action="createEpisode.do" method="GET" >
+						<input type="submit" class="btn btn-outline-dark"
+							value="Add An Episode" />
 					</form>
 				</li>
 				<li class="nav-item active" id="viewEp">
 
 					<form action="viewEpisodes.do" method="GET">
-						<button class="btn btn-sm btn-outline-secondary" type="button"
-							type="submit">View Episodes</button>
+						<input type="submit" class="btn btn-outline-dark"
+							value="View Episode List" />
 					</form>
 				</li>
 			</ul>
