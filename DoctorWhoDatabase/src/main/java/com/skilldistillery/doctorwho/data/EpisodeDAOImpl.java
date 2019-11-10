@@ -34,10 +34,36 @@ public class EpisodeDAOImpl implements EpisodeDAO {
 
 	@Override
 	public Episode createEpisode(@Valid Episode episode) {
+		em.persist(episode);
+		em.flush();
+		return episode;
+	}
 
+	@Override
+	public Episode updateEpisode(@Valid Episode episode, int epId) {
 		
+		Episode updateEpisode = em.find(Episode.class, epId);
+	
+		updateEpisode.setEra(episode.getEra());
+		updateEpisode.setSeason(episode.getSeason());
+		updateEpisode.setEpisodeNum(episode.getEpisodeNum());
+		updateEpisode.setTitle(episode.getTitle());
+		updateEpisode.setDescription(episode.getDescription());
+		updateEpisode.setDoctor(episode.getDoctor());
+		updateEpisode.setVillain(episode.getVillain());
+		updateEpisode.setPlanet(episode.getPlanet());
+		updateEpisode.setYearSet(episode.getYearSet());
+		em.flush();
 		
-		return null;
+		return updateEpisode;
+	}
+
+	@Override
+	public void deleteEpisode(@Valid Episode episode, int epId) {
+		Episode deleteEpisode = em.find(Episode.class, epId);
+		em.remove(deleteEpisode);
+		em.flush();
+		
 	}
 
 }

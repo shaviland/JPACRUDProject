@@ -1,6 +1,5 @@
 package com.skilldistillery.doctorwho.controllers;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -32,7 +31,7 @@ public class EpisodeController {
 		return "index";
 
 	}
-	
+
 	@RequestMapping(path = "getEpisode.do", method = RequestMethod.GET)
 	public ModelAndView getFilm(@RequestParam("fid") int fid) {
 		ModelAndView mv = new ModelAndView();
@@ -43,20 +42,46 @@ public class EpisodeController {
 		mv.setViewName("episode/show");
 		return mv;
 	}
-	
+
 	@RequestMapping(path = "createEpisode.do", method = RequestMethod.GET)
-    public ModelAndView goToCreateFilm(@Valid Episode episode) {
-        ModelAndView mv = new ModelAndView();
-        mv.setViewName("episode/create-episode");
-        return mv;
-    }
-    @RequestMapping(path = "createdEpisode.do", method = RequestMethod.POST)
-    public ModelAndView goToCreatedFilm(@Valid Episode episode) throws SQLException {
-        ModelAndView mv = new ModelAndView();
-        Episode newEpisode = epDAO.createEpisode(episode);
-        mv.addObject("episode", newEpisode);
-        mv.setViewName("episode/show");
-        return mv;
-    }
+	public ModelAndView goToCreateFilm(@Valid Episode episode) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("episode/create-episode");
+		return mv;
+	}
+
+	@RequestMapping(path = "addEpisode.do", method = RequestMethod.GET)
+	public ModelAndView goAddFilm(@Valid Episode episode) {
+		ModelAndView mv = new ModelAndView();
+		Episode newEpisode = epDAO.createEpisode(episode);
+		mv.addObject("episode", newEpisode);
+		mv.setViewName("episode/show");
+		return mv;
+	}
+
+	@RequestMapping(path = "getOrigEpisode.do", params = "epId", method = RequestMethod.GET)
+	public ModelAndView getOrigEpisode(@Valid Episode origEpisode, int epId) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("origEpisode", epDAO.findById(epId));
+		mv.setViewName("episode/update-episode");
+		return mv;
+	}
+
+	@RequestMapping(path = "updateEpisode.do", params = "epId", method = RequestMethod.GET)
+	public ModelAndView updateEpisode(@Valid Episode episode, int epId) {
+		ModelAndView mv = new ModelAndView();
+		Episode updatedEpisode = epDAO.updateEpisode(episode, epId);
+		mv.addObject("episode", updatedEpisode);
+		mv.setViewName("episode/show");
+		return mv;
+
+	}
+	@RequestMapping(path = "deleteEpisode.do", params = "epId", method = RequestMethod.GET)
+	public ModelAndView deleteEpisode(@Valid Episode episode, int epId) {
+		ModelAndView mv = new ModelAndView();
+		epDAO.deleteEpisode(episode, epId);
+		mv.setViewName("episode/delete-episode");
+		return mv;
+	}
 
 }

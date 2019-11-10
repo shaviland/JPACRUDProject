@@ -9,7 +9,8 @@
 <body>
 	<div>
 		<h1>${episode.title}</h1>
-		<h3>${episode.era}Who</h3>
+		<h3>${episode.era} Who</h3>
+		<p>Episode Id: ${episode.id}</p>
 		<p>Season: ${episode.season}</p>
 		<p>Episode: ${episode.episodeNum}</p>
 		<p>Doctor: ${episode.doctor}</p>
@@ -18,6 +19,16 @@
 		<p>Set in: ${episode.yearSet}</p>
 		<p>Description: ${episode.description}</p>
 	</div>
+	<form action="getOrigEpisode.do" method="GET">
+	<input type="hidden" name="epId" value="${episode.id }"> 
+		<input type="submit" class="btn btn-outline-light"
+			value="Update Episode" />
+	</form>
+	<form action="deleteEpisode.do" method="GET">
+	<input type="hidden" name="epId" value="${episode.id }"> 
+		<input type="submit" class="btn btn-outline-light"
+			value="Delete Episode" />
+	</form>
 	<form action="/" method="GET">
 		<input type="submit" class="btn btn-outline-light"
 			value="Return to Home Page" />

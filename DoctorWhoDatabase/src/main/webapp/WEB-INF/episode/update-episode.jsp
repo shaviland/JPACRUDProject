@@ -6,13 +6,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Episode Creation</title>
+<title>Episode Update</title>
 </head>
 <body>
-	<form:form action="addEpisode.do" method="GET" modelAttribute="episode">
+	<form:form action="updateEpisode.do" method="GET" modelAttribute="episode">
 	
+		<input type="hidden" name="epId" value="${origEpisode.id }">
 		<form:label path="title">Title:</form:label>
-		<form:input path="title" required="required" />
+		<form:input path="title" required="required" default="${origEpisode.title }" placeholder="${origEpisode.title }" value="${origEpisode.title }" />
 		<form:errors path="title" />
 		<br />
 		<form:label path="era">Era:</form:label>
@@ -23,39 +24,39 @@
 		<form:errors path="era" />
 		<br />
 		<form:label path="season">Season: </form:label>
-		<form:input path="season" min="1" type="number" required="required" />
+		<form:input path="season" min="1" type="number" required="required" default="${origEpisode.season }" placeholder="${origEpisode.season }" value="${origEpisode.season }" />
 		<form:errors path="season" />
 		<br />
 		<form:label path="episodeNum">Episode Number: </form:label>
-		<form:input path="episodeNum" min="1" type="number"
-			required="required" />
+		<form:input path="episodeNum" min="1" type="number" required="required"  default="${origEpisode.episodeNum }" placeholder="${origEpisode.episodeNum }" value="${origEpisode.episodeNum }"/>
 		<form:errors path="episodeNum" />
 		<br />
 		<form:label path="doctor">Doctor: </form:label>
-		<form:input path="doctor" required="required" />
+		<form:input path="doctor" required="required" default="${origEpisode.doctor }" placeholder="${origEpisode.doctor }" value="${origEpisode.doctor }"/>
 		<form:errors path="doctor" />
 		<br />
 		<form:label path="villain">Villain: </form:label>
-		<form:input path="villain" />
+		<form:input path="villain" default="${origEpisode.villain }" placeholder="${origEpisode.villain }" value="${origEpisode.villain }"/>
 		<form:errors path="villain" />
 		<br />
 		<form:label path="planet">Planet: </form:label>
-		<form:input path="planet" />
+		<form:input path="planet" default="${origEpisode.planet }" placeholder="${origEpisode.planet }" value="${origEpisode.planet }" />
 		<form:errors path="planet" />
 		<br />
 		<form:label path="yearSet">Set in: </form:label>
-		<form:input path="yearSet" />
+		<form:input path="yearSet" default="${origEpisode.yearSet }" placeholder="${origEpisode.yearSet }" value="${origEpisode.yearSet }"/>
 		<form:errors path="yearSet" />
 		<br />
 		<form:label path="description">Description:</form:label>
-		<form:input path="description" required="required" />
+		<form:input path="description" required="required" default="${origEpisode.description }" placeholder="${origEpisode.description }" value="${origEpisode.description }" />
 		<form:errors path="description" />
 		<br />
-
+	
 
 		<input type="submit" class="btn btn-outline-light"
-			value="Create Episode" />
+			value="Update Episode" />
 	</form:form>
+	
 	<form action="index" method="GET">
 		<input type="submit" class="btn btn-outline-light"
 			value="Return to Home Page" />
