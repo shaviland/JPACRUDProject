@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.nav{
+	background: blue;
+}
+body{
+	background: url('images/background.jpg');
+}
+button{
+		margin-left:20px;
+		margin-right:20px;
+}

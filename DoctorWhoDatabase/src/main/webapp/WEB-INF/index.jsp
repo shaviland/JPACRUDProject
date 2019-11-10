@@ -6,27 +6,54 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Episode Directory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>Doctor Who Directory</title>
 </head>
-<body>
-	<form action="getEpisode.do" method="GET">
-		Look Up Episode By ID: <input type="text" name="fid" /> <input type="submit"
-			value="Show Episode" /> <br>
-	</form>
-		<form action="createEpisode.do" method="GET">
-		<input type="submit" class="btn btn-outline-light"
-			value="Add An Episode" />
-	</form>
-	</form>
-		<form action="viewEpisodes.do" method="GET">
-		<input type="submit" class="btn btn-outline-light"
-			value="View All Episodes" />
-	</form>
-	<%-- <c:forEach items="${episodes}" var="episode">
-		<a href="getEpisode.do?fid=${episode.id}">${episode.title}</a>
-		<br>
-	</c:forEach> --%>
+<body background="../images/background.jpg">
 
-	
+	<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/">Doctor Who Database</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+
+					<form action="getEpisode.do" method="GET" id="lookUp">
+						Look Up Episode By ID: <input type="text" name="fid"
+							required="required" /> <input type="submit" value="Show Episode" />
+					</form>
+				</li>
+
+				<li class="nav-item active" id="createEp">
+					<form action="createEpisode.do" method="GET">
+						<button class="btn btn-sm btn-outline-secondary" type="button"
+							type="submit">Add An Episode</button>
+					</form>
+				</li>
+				<li class="nav-item active" id="viewEp">
+
+					<form action="viewEpisodes.do" method="GET">
+						<button class="btn btn-sm btn-outline-secondary" type="button"
+							type="submit">View Episodes</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
 </body>
 </html>
