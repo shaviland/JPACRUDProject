@@ -18,10 +18,10 @@
 <title>Episode List</title>
 </head>
 <body>
-
-	<div id="viewlist">
+	<h1 class="viewlist">Episode List</h1>
+	<div class="viewlist">
 		<c:forEach items="${episodes}" var="episode">
-			<a href="getEpisode.do?fid=${episode.id}">${episode.title}</a>
+			<a href="getEpisode.do?fid=${episode.id}" class="viewlist">${episode.title}</a>
 			<br>
 		</c:forEach>
 	</div>

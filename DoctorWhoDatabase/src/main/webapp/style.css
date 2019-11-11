@@ -18,11 +18,12 @@ body{
 #listhome{
 	margin-top:20px;
 }
-#viewlist{
+.viewlist{
 	margin-top:50px;
 	margin-left:20px;
 	color:white;
 }
-a{
+a.viewlist{
 	color:white;
+	text-shadow: 2px 2px #000000;
 }
