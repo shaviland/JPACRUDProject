@@ -22,8 +22,21 @@ body{
 	margin-top:50px;
 	margin-left:20px;
 	color:white;
+	text-shadow: 2px 2px #000000;
 }
 a.viewlist{
 	color:white;
 	text-shadow: 2px 2px #000000;
+}
+.eplist{
+	color:white;
+	text-shadow: 2px 2px #000000;
+	margin-left:20px;
+	margin-top:50px;
+}
+.btn.list{
+	margin-top:10px;
+}
+#infobuttons{
+	margin-bottom:50px;
 }

@@ -15,8 +15,8 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <title>Episode Information</title>
 </head>
-<body>
-	<div>
+<body >
+	<div class="eplist">
 		<h1>${episode.title}</h1>
 		<h3>${episode.era} Who</h3>
 		<p>Episode Id: ${episode.id}</p>
@@ -28,19 +28,22 @@
 		<p>Set in: ${episode.yearSet}</p>
 		<p>Description: ${episode.description}</p>
 	</div>
+	<div id="infobuttons">
 	<form action="getOrigEpisode.do" method="GET">
 	<input type="hidden" name="epId" value="${episode.id }"> 
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" class="btn btn-outline-light list"
 			value="Update Episode" />
 	</form>
 	<form action="deleteEpisode.do" method="GET">
 	<input type="hidden" name="epId" value="${episode.id }"> 
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" class="btn btn-outline-light list"
 			value="Delete Episode" />
 	</form>
 	<form action="/" method="GET">
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" class="btn btn-outline-light list"
 			value="Return to Home Page" />
 	</form>
+	</div>
+
 </body>
 </html>
