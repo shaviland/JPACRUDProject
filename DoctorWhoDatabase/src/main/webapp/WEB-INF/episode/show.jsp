@@ -28,7 +28,7 @@
 		<p>Set in: ${episode.yearSet}</p>
 		<p>Description: ${episode.description}</p>
 	</div>
-	<div id="infobuttons">
+	<div class="infobuttons">
 	<form action="getOrigEpisode.do" method="GET">
 	<input type="hidden" name="epId" value="${episode.id }"> 
 		<input type="submit" class="btn btn-outline-light list"

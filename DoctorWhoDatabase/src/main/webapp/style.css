@@ -1,42 +1,58 @@
 @charset "UTF-8";
 
+body {
+	background: #102372;
+	background-image:
+		url("https://images3.alphacoders.com/444/thumb-1920-44447.jpg");
+}
 
-body{
-	background:#102372;
-	background-image: url("https://images3.alphacoders.com/444/thumb-1920-44447.jpg");
+.btn {
+	margin-left: 20px;
+	margin-right: 20px;
+	color: white;
+	background: #102372;
 }
-.btn{
-		margin-left:20px;
-		margin-right:20px;
-		color:white;
-		background:#102372;
-}
-.create{
-	color:white;
-	margin:20px;
-}
-#listhome{
-	margin-top:20px;
-}
-.viewlist{
-	margin-top:50px;
-	margin-left:20px;
-	color:white;
+
+.create {
+	color: white;
+	margin: 20px;
 	text-shadow: 2px 2px #000000;
 }
-a.viewlist{
-	color:white;
+
+#listhome {
+	margin-top: 20px;
+}
+
+.viewlist {
+	margin-top: 50px;
+	margin-left: 20px;
+	color: white;
 	text-shadow: 2px 2px #000000;
 }
-.eplist{
-	color:white;
+
+a.viewlist {
+	color: white;
 	text-shadow: 2px 2px #000000;
-	margin-left:20px;
-	margin-top:50px;
 }
-.btn.list{
-	margin-top:10px;
+
+.eplist {
+	color: white;
+	text-shadow: 2px 2px #000000;
+	margin-left: 20px;
+	margin-top: 50px;
 }
-#infobuttons{
-	margin-bottom:50px;
+
+.btn.list {
+	margin-top: 10px;
+}
+
+.infobuttons {
+	margin-bottom: 50px;
+}
+
+.title {
+	margin-top: 50px;
+	margin-left: 20px;
+	color: white;
+	text-shadow: 2px 2px #000000;
 }

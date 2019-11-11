@@ -18,7 +18,8 @@
 <title>Episode Update</title>
 </head>
 <body>
-	<form:form action="updateEpisode.do" method="GET" modelAttribute="episode">
+	<h1 class="title">Update Episode</h1>
+	<form:form action="updateEpisode.do" class="create" method="GET" modelAttribute="episode">
 	
 		<input type="hidden" name="epId" value="${origEpisode.id }">
 		<form:label path="title">Title:</form:label>
@@ -61,14 +62,16 @@
 		<form:errors path="description" />
 		<br />
 	
-
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" class="btn btn-outline-light list"
 			value="Update Episode" />
 	</form:form>
 	
-	<form action="index" method="GET">
-		<input type="submit" class="btn btn-outline-light"
+	<div class="infobuttons">
+	<form action="/" method="GET">
+		<input type="submit" class="btn btn-outline-light list"
 			value="Return to Home Page" />
 	</form>
+	</div>
+	
 </body>
 </html>

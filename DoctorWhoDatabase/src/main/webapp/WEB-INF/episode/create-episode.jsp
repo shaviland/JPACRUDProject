@@ -19,8 +19,10 @@
 <title>Episode Creation</title>
 </head>
 <body>
-	<form:form class="create" action="addEpisode.do" method="GET" modelAttribute="episode">
-	
+	<h1 class="title">Create Episode</h1>
+	<form:form class="create" action="addEpisode.do" method="GET"
+		modelAttribute="episode">
+
 		<form:label path="title">Title:</form:label>
 		<form:input path="title" required="required" />
 		<form:errors path="title" />
@@ -62,13 +64,14 @@
 		<form:errors path="description" />
 		<br />
 
-
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" class="btn btn-outline-light list"
 			value="Create Episode" />
 	</form:form>
-	<form action="/" method="GET">
-		<input type="submit" class="btn btn-outline-light"
-			value="Return to Home Page" />
-	</form>
+	<div class="infobuttons">
+		<form action="/" method="GET">
+			<input type="submit" class="btn btn-outline-light list"
+				value="Return to Home Page" />
+		</form>
+	</div>
 </body>
 </html>
