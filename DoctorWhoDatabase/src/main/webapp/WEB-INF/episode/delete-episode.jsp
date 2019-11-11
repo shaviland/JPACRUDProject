@@ -16,10 +16,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Success!</h1>
-	<h3>Episode Has Been Deleted.</h3>
+	<h1 class="title">Success!</h1>
+	<h3 class="title">Episode Has Been Deleted.</h3>
 
-	<form action="/" method="GET">
+	<form action="goHome.do" method="GET">
 		<input type="submit" class="btn btn-outline-light"
 			value="Return to Home Page" />
 	</form>

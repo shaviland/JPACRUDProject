@@ -39,7 +39,7 @@
 		<input type="submit" class="btn btn-outline-light list"
 			value="Delete Episode" />
 	</form>
-	<form action="/" method="GET">
+	<form action="goHome.do" method="GET">
 		<input type="submit" class="btn btn-outline-light list"
 			value="Return to Home Page" />
 	</form>

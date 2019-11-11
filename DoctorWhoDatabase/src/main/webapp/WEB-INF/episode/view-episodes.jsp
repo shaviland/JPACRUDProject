@@ -25,7 +25,7 @@
 			<br>
 		</c:forEach>
 	</div>
-	<form action="/" method="GET">
+	<form action="goHome.do" method="GET">
 		<input type="submit" id="listhome" class="btn btn-outline-light"
 			value="Return to Home Page" />
 	</form>

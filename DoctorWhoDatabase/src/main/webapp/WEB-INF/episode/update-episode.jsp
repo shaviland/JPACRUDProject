@@ -27,7 +27,7 @@
 		<form:errors path="title" />
 		<br />
 		<form:label path="era">Era:</form:label>
-		<form:select path="era">
+		<form:select path="era" default="${origEpisode.era }" value="${origEpisode.era }">
 			<option value="classic">Classic</option>
 			<option value="revived">Revived</option>
 		</form:select>
@@ -67,7 +67,7 @@
 	</form:form>
 	
 	<div class="infobuttons">
-	<form action="/" method="GET">
+	<form action="goHome.do" method="GET">
 		<input type="submit" class="btn btn-outline-light list"
 			value="Return to Home Page" />
 	</form>

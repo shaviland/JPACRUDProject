@@ -21,7 +21,7 @@ public class EpisodeController {
 	@Autowired
 	EpisodeDAO epDAO;
 
-	@RequestMapping(path = "/", method = RequestMethod.GET)
+	@RequestMapping(path = "goHome.do", method = RequestMethod.GET)
 	public String index(Model model) {
 		
 		List<Episode> episode = epDAO.findAll();

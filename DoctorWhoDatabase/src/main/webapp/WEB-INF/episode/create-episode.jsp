@@ -68,7 +68,7 @@
 			value="Create Episode" />
 	</form:form>
 	<div class="infobuttons">
-		<form action="/" method="GET">
+		<form action="goHome.do" method="GET">
 			<input type="submit" class="btn btn-outline-light list"
 				value="Return to Home Page" />
 		</form>
