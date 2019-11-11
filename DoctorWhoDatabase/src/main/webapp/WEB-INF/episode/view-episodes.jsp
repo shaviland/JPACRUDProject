@@ -6,16 +6,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
 <title>Episode List</title>
 </head>
 <body>
 
-<c:forEach items="${episodes}" var="episode">
-		<a href="getEpisode.do?fid=${episode.id}">${episode.title}</a>
-		<br>
-	</c:forEach>
+	<div id="viewlist">
+		<c:forEach items="${episodes}" var="episode">
+			<a href="getEpisode.do?fid=${episode.id}">${episode.title}</a>
+			<br>
+		</c:forEach>
+	</div>
 	<form action="/" method="GET">
-		<input type="submit" class="btn btn-outline-light"
+		<input type="submit" id="listhome" class="btn btn-outline-light"
 			value="Return to Home Page" />
 	</form>
 

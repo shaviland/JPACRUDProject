@@ -1,12 +1,28 @@
 @charset "UTF-8";
 
-.nav{
-	background: blue;
-}
+
 body{
-	background: url('images/background.jpg');
+	background:#102372;
+	background-image: url("https://images3.alphacoders.com/444/thumb-1920-44447.jpg");
 }
 .btn{
 		margin-left:20px;
 		margin-right:20px;
+		color:white;
+		background:#102372;
+}
+.create{
+	color:white;
+	margin:20px;
+}
+#listhome{
+	margin-top:20px;
+}
+#viewlist{
+	margin-top:50px;
+	margin-left:20px;
+	color:white;
+}
+a{
+	color:white;
 }

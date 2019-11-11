@@ -33,7 +33,7 @@
 
 					<form action="getEpisode.do" method="GET" id="lookUp">
 						Look Up Episode By ID: <input type="text" name="fid"  required="required" /> <input
-							type="submit" value="Show Episode"/>
+							type="submit" class="btn btn-outline-dark" value="Show Episode"/>
 					</form>
 				</li>
 
