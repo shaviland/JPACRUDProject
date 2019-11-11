@@ -4,6 +4,11 @@ body {
 	background: #102372;
 	background-image:
 		url("https://images3.alphacoders.com/444/thumb-1920-44447.jpg");
+	text-align: center;
+}
+
+form {
+	display: inline-block;
 }
 
 .btn {
@@ -21,6 +26,7 @@ body {
 
 #listhome {
 	margin-top: 20px;
+	justify-content: center;
 }
 
 .viewlist {
@@ -44,6 +50,7 @@ a.viewlist {
 
 .btn.list {
 	margin-top: 10px;
+	justify-content: center;
 }
 
 .infobuttons {
@@ -55,4 +62,14 @@ a.viewlist {
 	margin-left: 20px;
 	color: white;
 	text-shadow: 2px 2px #000000;
+}
+div{
+    display: block;
+    text-align: center;
+}
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
