@@ -47,9 +47,12 @@ public class EpisodeController {
 		ModelAndView mv = new ModelAndView();
 
 		Episode episode = epDAO.findById(fid);
-
+		if(episode == null) {
+			mv.setViewName("episode/not-found");
+		}else {
 		mv.addObject("episode", episode);
 		mv.setViewName("episode/show");
+		}
 		return mv;
 	}
 
